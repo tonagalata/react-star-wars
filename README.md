@@ -1,6 +1,6 @@
 # React + Ajax 
 
-This project showcase how you can use React with Ajax. I consumes the [https://swapi.co/](Star Wars API) to render two static pages.
+This project showcase how you can use React with Ajax. I consumes the [https://swapi.co/] (Star Wars API) to render two static pages.
 
 ## App
 
