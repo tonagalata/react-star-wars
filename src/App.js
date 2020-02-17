@@ -7,14 +7,14 @@ import StarshipPage from './StarshipPage';
 class App extends Component {
 
   state = {
-    results: []
+    starships: []
   }
 
   async componentDidMount() {
     const starships = await getAllStarships()
     // await console.log(starships.results)
     await this.setState({
-      results: starships.results
+      starships: starships.results
     })
   }
 
@@ -27,12 +27,11 @@ class App extends Component {
         <Switch>
         <Route 
         exact path='/' 
-        
         render={() => 
-        <div className='shipHub'>
-          {this.state.results.map((ship, idx) => 
+        <div className='App-shipHub'>
+          {this.state.starships.map((ship, idx) => 
             <Link to={`/starships/${idx}`}>
-              <div key={idx} className='ships'>
+              <div key={idx} className='App-ships'>
                 {ship.name}
               </div>
             </Link>
@@ -45,7 +44,7 @@ class App extends Component {
           render={(props) =>
             <StarshipPage 
             {...props} 
-          results={this.state.results}
+            starships={this.state.starships}
         />  
         }/>
         </Switch>

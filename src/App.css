@@ -14,15 +14,15 @@
   text-transform: uppercase;
 }
 
-.shipHub {
+.App-shipHub {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-content: center;
   font-family: 'Roboto Condensed'
 }
 
-.ships {
+.App-ships {
   height: 100px;
   width: 300px;
   padding: 30px;
@@ -32,6 +32,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: x-large;
+  font-size: xx-large;
   color: #fff;
+}
+
+.App-shipHub > a {
+  text-decoration: none;
 }

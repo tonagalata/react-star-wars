@@ -1,8 +1,28 @@
+.shipKeys > div, .shipKeys > a {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.shipKeys > a {
+  display: block;
+  color: #fff;
+}
+
+.shipValues > div {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: left;
+}
 
 .shipHub {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-content: center;
   flex-direction: column;
   font-family: 'Roboto Condensed';
@@ -11,14 +31,13 @@
 }
 
 .ships {
-  height: 100px;
-  width: 400px;
-  padding: 30px;
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
   background-color: rgba(16, 71, 71,.7);
-  margin: 10px;
   border-radius: 10px;
   display: flex;
-  /* justify-content: center; */
+  justify-content: flex-start;
   font-size: x-large;
   color: #fff;
 }

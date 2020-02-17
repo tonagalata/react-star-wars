@@ -7,29 +7,27 @@ class StarshipPage extends Component{
   render(){
     return (
       <div className={styles.shipHub}>
-        {(this.props.results.length !== 0) ? (
+        {(this.props.starships.length !== 0) ? (
         <div className={styles.ships}>
-            <div>
+            <div className={styles.shipKeys}>
               <div>
-                Name:&nbsp;
+                Name:
               </div>
               <div>
-                Model:&nbsp;
+                Model:
               </div>
-              <div>
-                <Link to='/'>Return</Link>
-              </div>
+              <Link to='/'>Return</Link>
             </div>
-          <div>
+          <div className={styles.shipValues}>
             <div>
-              {this.props.results[this.props.match.params.id].name}
+              {this.props.starships[this.props.match.params.id].name}
             </div>
             <div>
-              {this.props.results[this.props.match.params.id].model}
+              {this.props.starships[this.props.match.params.id].model}
             </div>
-        {console.log(this.props.results[this.props.match.params.id])}
+              {console.log(this.props.starships[this.props.match.params.id])}
           </div>
-        </div>) : 'Loading...'}
+        </div>) : <h2>Loading...</h2>}
       </div>
     )
   }
