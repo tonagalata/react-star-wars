@@ -25,9 +25,11 @@ class StarshipPage extends Component{
             <div>
               {this.props.starships[this.props.match.params.id].model}
             </div>
-              {console.log(this.props.starships[this.props.match.params.id])}
+
+              {/* {console.log(this.props.starships[this.props.match.params.id])} */}
           </div>
         </div>) : <h2>Loading...</h2>}
+        
       </div>
     )
   }

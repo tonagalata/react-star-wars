@@ -19,7 +19,9 @@
   flex-wrap: wrap;
   /* justify-content: space-around; */
   align-content: center;
-  font-family: 'Roboto Condensed'
+  justify-content: flex-start;
+  font-family: 'Roboto Condensed';
+  margin-left: 15vmin;
 }
 
 .App-ships {

@@ -6,12 +6,12 @@
   margin-top: 10px;
 }
 
-.shipKeys > a {
+.shipKeys > a, .shipValues > a {
   display: block;
   color: #fff;
 }
 
-.shipValues > div {
+.shipValues > div, .shipValues > a {
   display: flex;
   align-content: center;
   flex-direction: column;

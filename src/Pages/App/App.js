@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { getAllStarships } from './services/sw-api'
+import { getAllStarships } from '../../services/sw-api'
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import StarshipPage from './StarshipPage';
+import StarshipPage from '../../components/StarshipPage/StarshipPage';
 
 class App extends Component {
 
   state = {
-    starships: []
+    starships: [],
   }
 
   async componentDidMount() {
     const starships = await getAllStarships()
     // await console.log(starships.results)
     await this.setState({
-      starships: starships.results
+      starships: starships.results,
     })
   }
 
@@ -30,9 +30,10 @@ class App extends Component {
         render={() => 
         <div className='App-shipHub'>
           {this.state.starships.map((ship, idx) => 
-            <Link to={`/starships/${idx}`}>
+            <Link key={idx} to={`/starships/${idx}`}>
               <div key={idx} className='App-ships'>
                 {ship.name}
+                {console.log(ship)}
               </div>
             </Link>
           )}
@@ -43,9 +44,9 @@ class App extends Component {
           exact path='/starships/:id' 
           render={(props) =>
             <StarshipPage 
-            {...props} 
-            starships={this.state.starships}
-        />  
+              {...props} 
+              starships={this.state.starships}
+            />  
         }/>
         </Switch>
       </div>
