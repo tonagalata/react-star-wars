@@ -1,0 +1,24 @@
+
+.shipHub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: column;
+  font-family: 'Roboto Condensed';
+  margin-top: 25vmin;
+  margin-bottom: auto;
+}
+
+.ships {
+  height: 100px;
+  width: 400px;
+  padding: 30px;
+  background-color: rgba(16, 71, 71,.7);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  /* justify-content: center; */
+  font-size: x-large;
+  color: #fff;
+}
